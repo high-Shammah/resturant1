@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/69f9015363.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="restuarant.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+  <header id="myHeader" class="fixed top-0 w-full bg-white z-50" >
+    <nav class="flex justify-between border-t border-solid border-2 border-sky-500">
+        <img class="w-24 h-24 md:w-48 " src="images/LOGO.png" alt="">
+
+       <div class="flex items-center px-2 lg:px-20 ">
+        <ul id="nav-links" class="hidden sm:hidden md:flex space-x-8">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Hours&location.html">Hours & Location</a></li>
+          <li><a href="Workwithus.html">Work with Us</a></li>
+        </ul>
+        <div class="ml-12">
+          <a href="" id="reserveButton" onclick="toggleOverlay()">
+            <button class="hidden md:block border-solid border-2 border-sky-500 px-2 py-2">Reserve/Waitlist</button>
+          </a>
+        </div>
+       
+        <div id="burger" class="md:hidden px-4 cursor-pointer" onclick="toggleOverlay()">&#9776;</div>
+      </div>
+        
+    </nav>
+   
+  </header>
+
+
+    <!-- Overlay -->
+  <div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50">
+    <div id="overlay-content" class="fixed top-0 right-0 w-3/4 h-full bg-white p-8 z-50">
+      <button id="cancel-btn" onclick="toggleOverlay()">&#10006;</button>
+      <ul id="overlay-nav-links" class="flex flex-col space-y-4">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Hours&location.html">Hours & Location</a></li>
+        <li><a href="Workwithus.html">Work with Us</a></li>
+      </ul>
+
+      <a href="" id="reserveButton" onclick="toggleOverlay()">
+        <button class="border-solid border-2 border-sky-500 px-2 py-2">Reserve/Waitlist</button>
+      </a>
+    </div>
+  </div>
+  
+  <section class="relative w-full h-96 mt-28 overflow:hidden">
+    <div class="swiper mySwiper absolute top-0 left-0  w-full h-full ">
+      <div class="swiper-wrapper ">
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/Jollof-rice-with-fried-turkey.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/Yam-Porridge.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/eba.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/Egusi-Soup.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/white-rice-1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/Stir-fry-spaghetti.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/starch-and-banga.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/fish something.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="w-full h-full object-cover" src="images/Friend-Plantainand-Eggmeal.jpg" alt="">
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    
+  </section>
+
+
+  <div class="border-b border-gray-100 mt-20 mb-12"></div>
+
+<section class="flex flex-col justify-between sm:flex-row sm:px-12 px-8 py-8 sm:py-20">
+  <div class="border border-2 border-sky-500 py-4 px-8 sm:px-20 md:px-40 md:mb-4 mb-10 sm:mb-16">
+   <h2 class="text-5xl sm:text-3xl font-bold mb-4 mt-8 md:ml-2 sm:ml-12 ">Visit Us</h2>
+   <div class="border-b-2 border-indigo-500 mb-8 w-68 sm:w-68 "></div>
+   <a href=""></a>
+   <div class="sm:ml-12 md:ml-2">
+    <h3 class="font-semibold text-2xl mb-2 ">Monday - Thursday</h3>
+    <p class="text-xl mb-6">5:00 pm - 9:30 pm</p>
+   </div>
+   <div>
+    <h3 class="font-semibold text-2xl mb-2 ">Friday</h3>
+    <p class="text-xl mb-6">5:00 pm - 10:30 pm</p>
+   </div>
+   <div>
+    <h3 class="font-semibold text-2xl mb-2 ">Saturday</h3>
+    <p class="text-xl mb-6">11:00 am - 9:30 pm</p>
+   </div>
+   <div>
+    <h3 class="font-semibold text-2xl mb-2 ">Sunday</h3>
+    <p class="text-xl mb-6">11:00 am - 9:30 pm</p>
+   </div>
+   <div>
+    <h3 class="font-semibold text-2xl mb-2 ">Saturday & Sunday Brunch</h3>
+    <p class="text-xl mb-6">11:00 am - 3:30 pm</p>
+   </div>
+   <div>
+    <h3 class="font-semibold text-2xl mb-2 ">Happy Hour</h3>
+    <p class="text-xl mb-2">bar only, limited food</p>
+    <p class="text-xl mb-10">5:00 pm - 6:30 pm</p>
+   </div>
+
+   <div class="sm:flex sm:justify-between">
+    <a href="Menu.html" onclick="redirectToForm()" >
+      <button class="border-solid border-2 border-sky-500 px-4 py-2" href=""> OUR WAITLIST</button>
+    </a>
+    <a href="Hours&location.html" onclick="redirectToForm()" >
+      <button class="border-solid border-2 border-sky-500 px-4 py-2" href=""> FIND US</button>
+    </a>
+  </div>
+</div>
+  </div>
+
+  <div>
+
+  <img class="w-full sm:w-full space-y-8 " src="images/Jollof-Spaghetti.jpg" alt="">
+</section>
+
+
+
+<div class="border-b border-gray-100 mt-20 mb-12"></div>
+
+
+
+<section class="relative mt-16 h-72 ">
+  <img src="images/akara-and-pap.jpg" alt="" class="w-full md:h-64 object-cover sm:h-auto">
+  <div class="absolute top-2/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+    <a href="" onclick="redirectToForm">
+      <button class="border-solid border-4 border-sky-500 px-4 py-2" style="@media (max-width: 640px) { margin-top: -15rem; }" >
+        Reserve/Waitlist</button>
+    </a>
+  </div>
+</section>
+
+
+<div class="border-b border-gray-100 mt-20 mb-12"></div>
+
+<div class="border-b border-gray-100 mt-20 mb-12"></div>
+
+
+
+<section>
+  <div class="flex items-center justify-center">
+    <img src="images/chef icon 1.jpg" class="rounded-full w-32 h-32" alt="Chef Icon">
+  </div>
+  <h3 class="font-bold text-2xl mt-16 p-8 px-16 md:px-20 ">A MODERN APPROACH TO ITALIAN CUISINE IN SAN 
+    FRANCISCO’S HISTORIC FILLMORE DISTRICT</h3>
+  <p class="text-xl p-4 px-8 ">
+    The Tailor’s Son is a Northern Italian restaurant with an emphasis on 
+quality ingredients and precision cooking. The vegetable-forward dishes 
+pay tribute to the food of Milan with a menu that utilizes the bounty of 
+Northern California produce and pays careful attention to detail – treating 
+quality ingredients with respect and allowing them to shine in their best 
+iterations.
+  </p>
+  <div class="flex flex-wrap px-36 mt-8 justify-between">
+    <a href="Menu.html" onclick="redirectToForm">
+      <button class="border-solid border-2 border-sky-500 px-4 py-2 mb-4">Reserve</button>
+    </a>
+    <a href="Menu.html" onclick="redirectToForm">
+      <button class="border-solid border-2 border-sky-500 px-4 py-2 mb-4">Reserve</button>
+    </a>
+    <a href="Menu.html" onclick="redirectToForm">
+      <button class="border-solid border-2 border-sky-500 px-4 py-2 mb-4">Reserve</button>
+    </a>
+    <a href="Menu.html" onclick="redirectToForm">
+      <button class="border-solid border-2 border-sky-500 px-4 py-2 mb-4">Reserve</button>
+    </a>
+  </div>
+</section>
+
+
+<div class="border-b border-gray-100 mt-20 mb-12"></div>
+
+
+<section class="relative mt-16 h-72 ">
+  <img src="images/akara-and-pap.jpg" alt="" class="w-full md:h-64 object-cover sm:h-auto">
+  <div class="absolute top-2/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+    <a href="" onclick="redirectToForm">
+      <button class="border-solid border-4 border-sky-500 px-4 py-2" style="@media (max-width: 640px) { margin-top: -15rem; }" >
+        Reserve/Waitlist</button>
+    </a>
+  </div>
+</section>
+
+
+
+<div class="border-b border-gray-100 mt-20 mb-12"></div>
+
+
+<section>
+  <div class="flex items-center justify-center">
+    <img src="images/chef icon 2.jpg" class="rounded-full mt-12" alt="Chef Icon">
+  </div>
+  <h3 class="font-bold text-2xl mt-16 p-8 px-16 md:px-20 ">A MODERN APPROACH TO ITALIAN CUISINE IN SAN 
+    FRANCISCO’S HISTORIC FILLMORE DISTRICT</h3>
+  <p class="text-xl p-4 px-8 ">
+    The Tailor’s Son is a Northern Italian restaurant with an emphasis on 
+quality ingredients and precision cooking. The vegetable-forward dishes 
+pay tribute to the food of Milan with a menu that utilizes the bounty of 
+Northern California produce and pays careful attention to detail – treating 
+quality ingredients with respect and allowing them to shine in their best 
+iterations.
+  </p>
+  <div class="flex flex-wrap lg:px-80 lg:ml-80 px-36 mt-16 justify-between">
+    <a href="" onclick="redirectToForm">
+      <button class="border-solid border-2 border-sky-500 px-4 py-2 mb-4">Reserve/Waitlist</button>
+    </a>
+  </div>
+</section>
+
+
+<div class="border-b border-gray-100 mt-20 mb-12"></div>
+
+
+<section class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-3 gap-0 mt-8 mb-12">
+  <!-- First Row -->
+  <div class="flex justify-center">
+    <img src="images/Afang-Soup.jpg" alt="Image 1" class="w-full h-48 object-cover">
+  </div>
+  <div class="flex justify-center">
+    <img src="images/African-Beef-Stew.jpg" alt="Image 2" class="w-full h-48 object-cover">
+  </div>
+  <div class="flex justify-center">
+    <img src="images/Amala With Ewedu And Gbegiri_. Nigerian food" alt="Image 3" class="w-full h-48 object-cover">
+  </div>
+
+  <!-- Second Row -->
+  <div class="flex justify-center">
+    <img src="images/amala2.jpg" alt="Image 4" class="w-full h-48 object-cover">
+  </div>
+  <div class="flex justify-center">
+    <img src="images/Banga-Soup-2.jpg" alt="Image 5" class="w-full h-48 object-cover">
+  </div>
+  <div class="flex justify-center">
+    <img src="images/beans-3.jpg" alt="Image 6" class="w-full h-48 object-cover">
+  </div>
+</section>
+
+
+
+<footer class="bg-blue-500 text-white py-4">
+  <div class="container mx-auto text-center">
+      <p>&copy; 2023 Your Company. All rights reserved.</p>
+      <p class="mt-2">Designed with <span class="text-gray-800">&#10084;</span> by Shammah Ugbebor </p>
+  </div>
+</footer>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <script>
+
+function toggleOverlay() {
+    // Toggle hidden-md class first
+    document.getElementById('nav-links').classList.toggle('sm:hidden');
+    // Toggle the overlay visibility
+    document.getElementById('overlay').classList.toggle('hidden');
+    // Toggle the body overflow class
+    document.body.classList.toggle('overflow-hidden');
+
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.getElementById('burger');
+    const menu = document.querySelector('nav ul');
+
+    burger.addEventListener('click', function () {
+      menu.classList.toggle('hidden');
+    });
+  });
+
+
+  function showReservationOverlay() {
+    document.getElementById('overlay').classList.remove('hidden');
+  }
+
+  function hideReservationOverlay() {
+    document.getElementById('overlay').classList.add('hidden');
+  }
+
+  // Add event listener to the Reserve Button
+  document.getElementById('reserveButton').addEventListener('click', showReservationOverlay);
+
+
+
+  var swiper = new Swiper(".mySwiper", {
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  slidesPerView: "auto",
+  spaceBetween: 16, // Adjust the space between slides as needed
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+
+  breakpoints: {
+    // Customize the swiper behavior for different screen sizes
+    768: {
+      slidesPerView: 1, // Number of slides to show on screens >= 768px
+    },
+    1024: {
+      slidesPerView: "auto",
+    },
+  },
+});
+
+
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/69f9015363.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="restuarant.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+
+</head>
+<body>
+  <header id="myHeader" class="fixed top-0 w-full bg-white z-50" >
+    <nav class="flex justify-between border-t border-solid border-2 border-sky-500">
+        <img class="w-24 h-24 md:w-48 " src="images/LOGO.png" alt="">
+
+       <div class="flex items-center px-2 lg:px-20 ">
+        <ul id="nav-links" class="hidden sm:hidden md:flex space-x-8">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Hours&location.html">Hours & Location</a></li>
+          <li><a href="Workwithus.html">Work with Us</a></li>
+        </ul>
+        <div class="ml-12">
+          <a href="" onclick="toggleOverlay()">
+            <button class="hidden md:block border-solid border-2 border-sky-500 px-2 py-2">Reserve/Waitlist</button>
+          </a>
+        </div>
+       
+        <div id="burger" class="md:hidden px-4 cursor-pointer" onclick="toggleOverlay()">&#9776;</div>
+      </div>
+        
+    </nav>
+   
+  </header>
+
+
+    <!-- Overlay -->
+  <div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50">
+    <div id="overlay-content" class="fixed top-0 right-0 w-3/4 h-full bg-white p-8 z-50">
+      <button id="cancel-btn" onclick="toggleOverlay()">&#10006;</button>
+      <ul id="overlay-nav-links" class="flex flex-col space-y-4">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Hours&location.html">Hours & Location</a></li>
+        <li><a href="Workwithus.html">Work with Us</a></li>
+      </ul>
+
+      <a href="" onclick="toggleOverlay()">
+        <button class="border-solid border-2 border-sky-500 px-2 py-2">Reserve/Waitlist</button>
+      </a>
+    </div>
+  </div>
+
+  
+  <section class=" mt-20">
+    <div class="py-12 lg:px-96">
+      <h2 class="font-bold mb-4 ml-16 lg:ml-40 text-4xl">
+        WORK WITH US
+      </h2>
+      <p class="px-4"> We would love to have you join our team! Fill out the form below and we will be in touch.</p>
+    </div>
+    <form>
+        <label class="block px-20 lg:px-44 mb-12">
+            <div class="flex">
+                <span class="block text-sm font-medium text-slate-700">Name </span>
+                <span class="block text-sm font-sans text-slate-700">*Required*</span>
+            </div>
+          <input class="w-full border-2 border-slate-200 placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500"/>
+          <p class="mt-2 opacity-10 contrast-more:opacity-100 text-slate-600 text-sm">
+            We need this to steal your identity.
+          </p>
+        </label>
+      </form>
+      
+      <form>
+        <label class="block px-20 lg:px-44 mb-12">
+            <div class="flex">
+                <span class="block text-sm font-medium text-slate-700">Email</span>
+                <span class="block text-sm font-sans text-slate-700">*Required*</span>
+            </div>
+          <input class="w-full border-2 border-slate-200 placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500"/>
+          <p class="mt-2 opacity-10 contrast-more:opacity-100 text-slate-600 text-sm">
+            We need this to steal your identity.
+          </p>
+        </label>
+      </form>
+
+      <form>
+        <label class="block px-20 lg:px-44 mb-12">
+            <div class="flex">
+                <span class="block text-sm font-medium text-slate-700">Phone Number</span>
+                <span class="block text-sm font-sans text-slate-700">*Required*</span>
+            </div>
+          <input class="w-full border-2 border-slate-200 placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500"/>
+          <p class="mt-2 opacity-10 contrast-more:opacity-100 text-slate-600 text-sm">
+            We need this to steal your identity.
+          </p>
+        </label>
+      </form>
+
+      <form>
+        <label class="block px-20 lg:px-44 mb-12">
+            <div class="flex">
+                <span class="block text-sm font-medium text-slate-700">Cover Letterr</span>
+                <span class="block text-sm font-sans text-slate-700">*Required*</span>
+            </div>
+          <input class="w-full h-64 border-2 border-slate-200 placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500"/>
+          <p class="mt-2 opacity-10 contrast-more:opacity-100 text-slate-600 text-sm">
+            We need this to steal your identity.
+          </p>
+        </label>
+      </form>
+
+      <form>
+        <label class="block px-20 lg:px-44 mb-12">
+            <div class="flex">
+                <span class="block text-sm font-medium text-slate-700">Social Security Number</span>
+                <span class="block text-sm font-sans text-slate-700">*Required*</span>
+            </div>
+          <input class="w-full border-2 border-slate-200 placeholder-slate-400 contrast-more:border-slate-400 contrast-more:placeholder-slate-500"/>
+          <p class="mt-2 opacity-10 contrast-more:opacity-100 text-slate-600 text-sm">
+            We need this to steal your identity.
+          </p>
+        </label>
+      </form>
+
+      <div class="px-20 lg:px-44 mb-12">
+        <label for="resume">Choose a Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx">
+        <button onclick="uploadResume()">Upload Resume</button>
+      </div>
+
+      <div class=" px-20 ml-24 lg:px-80 mb-10 lg:ml-80">
+        <button onclick="applyForJob()" class="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-700">Apply</button>
+      </div>
+    
+  </section>
+
+
+
+  
+<footer class="bg-blue-500 text-white py-4">
+  <div class="container mx-auto text-center">
+      <p>&copy; 2023 Your Company. All rights reserved.</p>
+      <p class="mt-2">Designed with <span class="text-gray-800">&#10084;</span> by Shammah Ugbebor </p>
+  </div>
+</footer>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+  <script>
+
+function toggleOverlay() {
+    // Toggle hidden-md class first
+    document.getElementById('nav-links').classList.toggle('sm:hidden');
+    // Toggle the overlay visibility
+    document.getElementById('overlay').classList.toggle('hidden');
+    // Toggle the body overflow class
+    document.body.classList.toggle('overflow-hidden');
+
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.getElementById('burger');
+    const menu = document.querySelector('nav ul');
+
+    burger.addEventListener('click', function () {
+      menu.classList.toggle('hidden');
+    });
+  });
+
+
+  function uploadResume() {
+      const fileInput = document.getElementById('resume');
+      const file = fileInput.files[0];
+
+      if (file) {
+        // You can now handle the selected file, for example, upload it to a server
+        console.log('Selected File:', file.name);
+      } else {
+        console.log('No file selected.');
+      }
+    }
+</script>
+
+</body>
+</html>
